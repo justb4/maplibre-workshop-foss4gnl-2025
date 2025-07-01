@@ -5,7 +5,7 @@ maplibregl.addProtocol("pmtiles", protocol.tile);
 
 const map = new maplibregl.Map({
     container: 'mijnkaart', // container id
-    style: './assets/style.json', // style URL
+    style: 'assets/style.json', // style URL
     center: [5.66509, 51.96857], // starting position [lng, lat]
     zoom: 13 // starting zoom
 });
@@ -13,7 +13,7 @@ const map = new maplibregl.Map({
  map.on('load', () => {
         const source = new maplibregl.GeoJSONSource({
             type: 'geojson',
-            data: './assets/wandeling.geojson' // Or a URL
+            data: 'assets/wandeling.geojson' // Or a URL
         });
 
         map.addSource('route-source', source);
