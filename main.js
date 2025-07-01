@@ -20,11 +20,10 @@ const map = new maplibregl.Map({
 
         map.addLayer({
             id: 'route-layer',
-            type: 'fill',
+            type: 'line',
             source: 'route-source',
             paint: {
-                'fill-color': '#0080ff',
-                'fill-opacity': 0.5
+                'line-color': '#0080ff'
             }
         });
 
