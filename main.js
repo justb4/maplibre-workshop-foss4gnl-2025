@@ -10,6 +10,26 @@ const map = new maplibregl.Map({
     zoom: 13 // starting zoom
 });
 
+ map.on('load', () => {
+        map.addSource('route', {
+            'type': 'geojson',
+            url: './assets/wandeling.geojson'
+        });
+        map.addLayer({
+            'id': 'route',
+            'type': 'line',
+            'source': 'route',
+            'layout': {
+                'line-join': 'round',
+                'line-cap': 'round'
+            },
+            'paint': {
+                'line-color': '#888',
+                'line-width': 8
+            }
+        });
+    });
+
 // add the PMTiles plugin to the maplibregl global.
 // const protocol = new pmtiles.Protocol();
 // maplibregl.addProtocol('pmtiles', protocol.tile);
