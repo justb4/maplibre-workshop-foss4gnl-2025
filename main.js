@@ -11,12 +11,10 @@ const map = new maplibregl.Map({
 });
 
  map.on('load', () => {
-        const source = new maplibregl.GeoJSONSource({
-            type: 'geojson',
-            data: 'assets/wandeling.geojson' // Or a URL
+        map.addSource('route-source', {
+            'type': 'geojson',
+            data: './assets/wandeling.geojson'
         });
-
-        map.addSource('route-source', source);
 
         map.addLayer({
             id: 'route-layer',
@@ -26,7 +24,6 @@ const map = new maplibregl.Map({
                 'line-color': '#0080ff'
             }
         });
-
     });
 
 // add the PMTiles plugin to the maplibregl global.
