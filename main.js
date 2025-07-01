@@ -15,7 +15,7 @@ const map = new maplibregl.Map({
             'id': 'route',
             'type': 'line',
             'source': {
-                'type': 'geojson',
+                'type': 'vector',
                 'url': './assets/wandeling.geojson'
             },
             'layout': {
