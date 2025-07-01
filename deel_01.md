@@ -116,7 +116,7 @@ Sla alle bestanden op, zie je al een kaart verschijnen in de browser?
 
 ---
 
-We voegen nu nog wat CSS toe aan de pagina, MapLibre wordt gebundeld met wat CSS code die het nodig heeft voor UI elementen. Ook zorgen we dat de kaart het hele scherm in beslag neemt door het `100 vw` (view width) breed en `100 vh` (view height) breed te maken.
+We voegen nu nog wat CSS toe aan de pagina, MapLibre wordt gebundeld met wat CSS code die het nodig heeft voor UI elementen. Ook zorgen we dat de kaart het hele scherm in beslag neemt door het `100 vw` (view width) breed en `100 vh` (view height) hoog te maken.
 
 - [ ] Voeg de volgende code toe aan de `head` van `index.html`:
 
@@ -128,7 +128,7 @@ We voegen nu nog wat CSS toe aan de pagina, MapLibre wordt gebundeld met wat CSS
     margin: 0;
   }
 
-  #map {
+  #mijnkaart {
     width: 100vw;
     height: 100vh;
   }
@@ -142,5 +142,11 @@ Als het goed is zie je nu het volgende eindresultaat
 <img width="1296" alt="image" src="https://github.com/user-attachments/assets/ed301d95-2f55-4617-a525-a51b25b7fa7e" />
 
 > [!TIP]
-> Voor de enthausiastelingen, probeer een stijl van [OpenFreeMap](https://openfreemap.org/quick_start/).
+> Voor de enthousiastelingen, probeer een stijl van [OpenFreeMap](https://openfreemap.org/quick_start/).
+
+---
+
+- [ ] Zorg dat je `index.html` en `main.js` commit en pushed naar de repo. Je kan hiervoor `git` in de command line gebruiken of de UI.
+
+https://github.com/user-attachments/assets/79d99706-0daf-4c27-98e9-39bd2f4bbd26
 

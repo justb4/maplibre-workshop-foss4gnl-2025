@@ -25,44 +25,11 @@ Zorg ervoor dat je een deel hebt afgerond voordat je naar het volgende gaat.
 - [Deel 2: Website Deployen](./deel_02.md).
 - [Deel 3: PMTiles Extract maken van Wageningen](./deel_03.md).
 - [Deel 4: GeoJSON wandelroute rond Wageningen voorbereiden](./deel_04.md).
+- [Deel 5: PMTiles laden met MapLibre GL JS](./deel_05.md).
+- [Deel 6: Wandeling toevoegen aan de kaart](./deel_06.md).
+- [Deel 7: De kaart afmaken](./deel_07.md).
 
-## Assets voorbereiden
+Extra delen voor als er genoeg tijd is:
 
-Maak een nieuwe directory:
-
-```
-mkdir assets
-```
-
-Plaats het `wandeling.geojson` document dat je in de vorige stap hebt gemaakt in die directory.
-
-MapLibre heeft naast (vector)data verder nog nodig:
-
-- Lettertypes (fonts) in een specifiek formaat
-- Sprites voor icoontjes
-
-```sh
-# maak nieuwe map
-mkdir assets
-cd assets
-wget https://github.com/protomaps/basemaps-assets/archive/refs/heads/main.zip
-unzip main.zip
-mv basemaps-assets-main/* .
-rm main.zip
-rmdir basemaps-assets-main
-ls
-```
-
-## Stijl Downloaden en voorbereiden
-
-## Protomaps Basemap Style
-
-In deze stap gaan we een interessantere stijl laden.
-
-TODO
-
-## Wandeling toevoegen aan kaart
-
-- GeoJSON source toevoegen
-- Line layer maken
-- Leuke stijl toevoegen aan line layer
+- [Extra 1: TypeScript gebruiken](./typescript.md)
+- [Extra 2: Protomaps Assets Zelf Hosten](./assets.md)

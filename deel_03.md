@@ -36,18 +36,62 @@ Je kunt ook de website http://bboxfinder.com/ gebruiken (er is geen https), zoom
 
 ---
 
-- [ ] Ga naar de assets directory in the terminal (`cd assets`) en maak `wageningen.pmtiles`:
+- [ ] In de terminal: maak een directory 'assets' en ga daarin. Maak vervolgens daar het bestand `wageningen.pmtiles`:
 
 ```
+mkdir assets
+cd assets
 pmtiles extract <laatste PMTiles URL> wageningen.pmtiles --minzoom=10 --maxzoom=16 --bbox=<antwoord van stap 1>
 ```
 
 ---
 
-- [ ] Controleer of het gelukt is!
+- [ ] Download `wageningen.pmtiles` en inspecteer het bestand.
 
 Drag and drop je PMTiles-bestand in de [PMTiles Viewer](https://pmtiles.io/) om te controleren of het extracten gelukt is. Daartoe moet je het bestand (paar MB) even downloaden naar je computer: rechtermuis op bestand, dan `Download...`.
 
 <img width="1483" alt="image" src="https://github.com/user-attachments/assets/47b1667a-bb28-48bf-8b01-e99a9c2cc1d8#gh-light-mode-only" />
 
 <img width="1483" alt="image" src="https://github.com/user-attachments/assets/a6e697c7-038f-4840-98f2-936c27f7faad#gh-dark-mode-only" />
+
+---
+
+- [ ] Maak een commit met `wageningen.pmtiles` en push het bestand naar je fork.
+
+Gebruik de UI of de commandline (altijd sneller!):
+
+```
+# Keer terug naar je 'home' directory vanuit assets
+cd ..
+
+# 'Stage' het bestand
+git add assets/wageningen.pmtiles
+
+# 'Commit' het bestand met commentaar (-m)
+git commit -m "Add wageningen.pmtiles"
+
+# 'Push' het bestand
+git push
+```
+
+Zodra het bestand is gepushed zou het online moeten zijn, omdat je je GitHub repository als website hebt gepubliceerd in deel 2. Dat kan soms even duren. 
+
+---
+
+- [ ] Check of je via je browser bij het PMTiles-bestand kan dat je hebt gemaakt.
+
+Ga naar https://maps.protomaps.com/ en laad de volgende URL:
+
+```
+https://<jouw github username>.github.io/maplibre-workshop-foss4gnl-2025/assets/wageningen.pmtiles
+```
+
+Klik op 'fit bounds'. Als het goed is zie je nu het volgende:
+
+<img width="1378" alt="image" src="https://github.com/user-attachments/assets/a6b10049-f4af-4eb3-9626-7408222d8257" />
+
+---
+
+- [ ] Sla de Protomaps basemap style in je repo.
+
+Klik nu op "Get style JSON", kopiëer de de MapLibre stijl van Protomaps Light en sla deze op als `assets/style.json`. We gaan deze in Deel 5 gebruiken. Vergeet niet een commit te maken!

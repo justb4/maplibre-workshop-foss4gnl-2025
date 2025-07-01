@@ -1,7 +1,7 @@
 # Deel 4: GeoJSON wandelroute rond Wageningen voorbereiden.
 
 Zoek een wandelroute in/rond Wageningen. Om deze straks in MapLibre te tonen hebben we de route als GeoJSON bestand nodig. 
-Er zijn meerdere mogelijkheden om daartoe te komen. Hieronder de weg die @justb4 gevolgd heeft:
+Er zijn meerdere mogelijkheden om daartoe te komen. Hieronder de weg die [@justb4](https://github.com/justb4/) gevolgd heeft:
 
 1. Ga naar [hiking.waymarkedtrails.org](https://hiking.waymarkedtrails.org/). Dit zijn alle wandelroutes in OSM.
 2. Linksonder in de Search box voer in "Wageningen".
@@ -40,8 +40,18 @@ In `<RELATIE_NUMMER>` vul je het route OSM Relation nummer in. Klik op `Run` but
 8. Als gelukt is, gaan we de GeoJSON via clipboard in een nieuw bestand brengen.
 
 9. Klik op `Export` en kies data 'GeoJSON' 'Copy'
-10. Maak nieuw bestand aan, bijv `wageningen.geojson`.
+10. Ga naar de 'assets' directory. Maak nieuw bestand aan, bijv met `touch wandeling.geojson` (of via menu).
 11. Open dit lege bestand in editor. 
-12. 'Paste' de GeoJSON uit clipboard in de editor
+12. 'Paste' de GeoJSON uit clipboard in de editor. Nu hebben we een wandelroute als GeoJSON bestand!
+13. 'Push' dit bestand net als eerder de PMTiles naar je geforkte repo: 
+```
+$ git add wandeling.geojson
+$ git commit -m "Add wandeling.geojson"
+$ git push
+```
 
-Nu hebben we een wandelroute als GeoJSON bestand!
+ > [!TIP]
+>  Tip: GitHub kan ook GeoJSON weergeven. Bekijk het bestand op een achtergrondkaart via `https://github.com/<je github naam>/maplibre-workshop-foss4gnl-2025/blob/main/assets/wandeling.geojson`
+
+
+
