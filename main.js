@@ -11,14 +11,13 @@ const map = new maplibregl.Map({
 });
 
  map.on('load', () => {
-        map.addSource('route', {
-            'type': 'geojson',
-            url: './assets/wandeling.geojson'
-        });
         map.addLayer({
             'id': 'route',
             'type': 'line',
-            'source': 'route',
+            'source': {
+                'type': 'geojson',
+                'url': './assets/wandeling.geojson'
+            },
             'layout': {
                 'line-join': 'round',
                 'line-cap': 'round'
