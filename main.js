@@ -11,22 +11,23 @@ const map = new maplibregl.Map({
 });
 
  map.on('load', () => {
+        const source = new maplibregl.GeoJSONSource({
+            type: 'geojson',
+            data: './assets/wandeling.geojson' // Or a URL
+        });
+
+        map.addSource('route-source', source);
+
         map.addLayer({
-            'id': 'route',
-            'type': 'line',
-            'source': {
-                'type': 'vector',
-                'url': './assets/wandeling.geojson'
-            },
-            'layout': {
-                'line-join': 'round',
-                'line-cap': 'round'
-            },
-            'paint': {
-                'line-color': '#888',
-                'line-width': 8
+            id: 'route-layer',
+            type: 'fill',
+            source: 'route-source',
+            paint: {
+                'fill-color': '#0080ff',
+                'fill-opacity': 0.5
             }
         });
+
     });
 
 // add the PMTiles plugin to the maplibregl global.
